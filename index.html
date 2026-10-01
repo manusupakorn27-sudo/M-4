@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ข้อสอบ Grammar 30 ข้อ: Noun Verb Adverb Adjective</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5fa;--card:#fff;--ink:#1b2a4a;--mute:#5c6b88;--line:#d5dcea;--ok:#1f8a4c;--okbg:#e3f5ea;--bad:#c0392b;--badbg:#fbe7e4;--hl:#ffe27a;--noun:#2f6fd0;--verb:#d9531e;--adv:#8a45c9;--adj:#12906f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10172a;--card:#19223a;--ink:#e8edf8;--mute:#9aa8c6;--line:#2c3856;--okbg:#14352338;--badbg:#40191638;--ok:#4cc783;--bad:#ff7b6b;--hl:#8a6d00;--noun:#6fa3f5;--verb:#ff8d5c;--adv:#c39bf0;--adj:#3fcfa6}}
+:root[data-theme="dark"]{--bg:#10172a;--card:#19223a;--ink:#e8edf8;--mute:#9aa8c6;--line:#2c3856;--okbg:#14352338;--badbg:#40191638;--ok:#4cc783;--bad:#ff7b6b;--hl:#8a6d00;--noun:#6fa3f5;--verb:#ff8d5c;--adv:#c39bf0;--adj:#3fcfa6}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Sarabun",system-ui,sans-serif;line-height:1.6;font-size:17px}
+header{max-width:760px;margin:0 auto;padding:36px 20px 12px}
+h1{font-size:clamp(28px,6vw,42px);line-height:1.15;margin:0 0 10px;font-weight:800}
+h1 mark{background:var(--hl);color:inherit;padding:0 .15em;border-radius:3px}
+header p{margin:0;color:var(--mute)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px}
+.bar div{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:12px;font-weight:600}
+.track{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--ink);transition:width .25s}
+main{max-width:760px;margin:0 auto;padding:8px 20px 60px}
+h2{margin:32px 0 4px;font-size:24px;font-weight:800}
+h2 small{font-weight:400;color:var(--mute);font-size:16px;margin-left:6px}
+.q{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:8px;padding:16px 18px;margin:14px 0}
+.q p{margin:0 0 10px;font-weight:600}
+.q p span{color:var(--c);margin-right:6px}
+.opts{display:grid;gap:8px}
+.opts label{display:flex;gap:10px;align-items:center;padding:9px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer}
+.opts label:hover{border-color:var(--c)}
+.opts input{accent-color:var(--c);width:18px;height:18px;margin:0}
+.opts label:has(input:checked){border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c)}
+.opts label:has(input:focus-visible){outline:3px solid var(--hl);outline-offset:2px}
+.opts label.ok{background:var(--okbg);border-color:var(--ok);box-shadow:inset 0 0 0 1px var(--ok)}
+.opts label.bad{background:var(--badbg);border-color:var(--bad);box-shadow:inset 0 0 0 1px var(--bad)}
+.ex{margin-top:10px;font-size:15px;color:var(--mute)}
+.ex b{color:var(--ink)}
+.q.miss{outline:3px solid var(--bad)}
+.who{display:grid;grid-template-columns:1fr 130px;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:14px 0}
+.who label{display:grid;gap:4px;font-weight:600;font-size:15px}
+.who input{font:inherit;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:9px 12px;width:100%}
+.who input:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+.who input.miss{border-color:var(--bad);outline:2px solid var(--bad)}
+@media(max-width:480px){.who{grid-template-columns:1fr}}
+button{font:inherit;font-weight:800;background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:13px 28px;cursor:pointer}
+button:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+.act{display:flex;gap:12px;align-items:center;margin-top:28px;flex-wrap:wrap}
+#msg{color:var(--bad);font-weight:600}
+#res{display:none;background:var(--card);border:2px solid var(--ink);border-radius:8px;padding:20px;margin:14px 0}
+#res .big{font-size:48px;font-weight:800;line-height:1}
+#res ul{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+#res li{border-left:6px solid var(--c);padding:2px 10px;background:var(--bg)}
+</style>
+</head>
+<body>
+<header>
+  <h1>ข้อสอบ Grammar <mark>30 ข้อ</mark></h1>
+  <p>Noun, Verb, Adverb และ Adjective &middot; เลือกคำตอบที่ถูกที่สุดเพียงข้อเดียว แล้วกดส่งคำตอบ</p>
+</header>
+<div class="bar"><div><span id="cnt">ตอบแล้ว 0/30</span><span class="track"><span class="fill" id="fill" style="display:block"></span></span></div></div>
+<main>
+  <div class="who">
+    <label>ชื่อ-นามสกุล<input id="sname" type="text" autocomplete="name" placeholder="เช่น สมชาย ใจดี"></label>
+    <label>เลขที่<input id="sno" type="text" inputmode="numeric" maxlength="3" placeholder="เช่น 12"></label>
+  </div>
+  <div id="res" role="status"></div>
+  <div id="paper"></div>
+  <div class="act"><button id="go">ส่งคำตอบ</button><span id="msg"></span></div>
+</main>
+<script>
+// [question, correct, wrong1, wrong2, wrong3, explanation]
+const S=[
+{k:"Noun",th:"คำนาม",c:"var(--noun)",q:[
+["Which word is a noun?","teacher","happy","run","slowly","teacher (ครู) เป็นคำนามที่บอกคน"],
+["___ is the capital of Thailand.","Bangkok","Quickly","Beautiful","Eat","Bangkok เป็นชื่อเมือง (คำนาม) จึงทำหน้าที่เป็นประธานได้"],
+["What is the plural of “child”?","children","childs","childes","childrens","child เป็นนามพหูพจน์ไม่ปกติ เปลี่ยนเป็น children"],
+["Which noun is uncountable?","water","chair","book","apple","water นับไม่ได้ จึงไม่เติม s และไม่ใช้ a/an"],
+["Which word is an abstract noun?","honesty","table","dog","pencil","honesty (ความซื่อสัตย์) เป็นนามธรรม จับต้องไม่ได้"],
+["She gave me some ___ about the trip.","advice","advices","an advice","advise","advice เป็นนามนับไม่ได้ ใช้กับ some ได้ แต่ไม่เติม s"],
+["Which one is a proper noun?","Chiang Mai","city","river","mountain","ชื่อเฉพาะของเมือง ต้องขึ้นต้นด้วยตัวพิมพ์ใหญ่"],
+["This is the ___ bag. (The bag belongs to the girl.)","girl's","girls","girl","girls's","เจ้าของเดียวใช้ 's จึงเป็น girl's"]]},
+{k:"Verb",th:"คำกริยา",c:"var(--verb)",q:[
+["Choose the verb: “Tom plays football every day.”","plays","Tom","football","day","plays คือคำกริยาที่บอกการกระทำของ Tom"],
+["She ___ to school every day.","goes","go","going","gone","ประธานเอกพจน์บุรุษที่ 3 ใน Present Simple กริยาเติม -es"],
+["What is the past tense of “buy”?","bought","buyed","buys","buying","buy เป็นกริยาไม่ปกติ: buy - bought - bought"],
+["They ___ watching TV now.","are","is","am","be","They เป็นพหูพจน์ และ now บอก Present Continuous จึงใช้ are + V-ing"],
+["What is the past participle of “write”?","written","wrote","writed","writing","write - wrote - written"],
+["I have ___ my homework.","finished","finish","finishing","finishes","have + V3 (Present Perfect) จึงใช้ finished"],
+["You ___ wear a seat belt. It is the law.","must","might","would","could","must ใช้บอกข้อบังคับหรือหน้าที่ที่ต้องทำ"],
+["He ___ TV when I called him.","was watching","watched","watches","has watched","เหตุการณ์ที่กำลังทำอยู่ในอดีตตอนที่มีอีกเหตุการณ์แทรก ใช้ Past Continuous"]]},
+{k:"Adverb",th:"กริยาวิเศษณ์",c:"var(--adv)",q:[
+["Which word is an adverb? “She sings beautifully.”","beautifully","She","sings","singer","beautifully ขยายกริยา sings บอกว่าร้องอย่างไร"],
+["He drives very ___.","carefully","careful","care","careless","ขยายกริยา drives ต้องใช้ adverb คือ carefully"],
+["Which word is an adverb of frequency?","always","yesterday","here","quickly","always (เสมอ) บอกความถี่ ส่วน yesterday=เวลา, here=สถานที่, quickly=ลักษณะ"],
+["She speaks English ___.","well","good","goodly","best","good เป็น adjective ส่วน adverb ของมันคือ well"],
+["The tea is ___ hot that I can't drink it.","so","such","much","many","โครงสร้าง so + adjective + that"],
+["Choose the correct sentence.","She is always late.","She always is late.","Always she is late.","She is late always.","adverb of frequency วางหลัง be และหน้ากริยาทั่วไป"],
+["He runs ___ than me.","faster","fast","fastly","more fastly","fast เป็นทั้ง adjective และ adverb รูปเปรียบเทียบคือ faster (ไม่มี fastly)"]]},
+{k:"Adjective",th:"คำคุณศัพท์",c:"var(--adj)",q:[
+["Choose the adjective: “She wore a red dress.”","red","She","wore","dress","red (สีแดง) ขยายนาม dress"],
+["This book is ___ than that one.","more interesting","interesting","most interesting","interestinger","adjective ยาวหลายพยางค์ใช้ more + adj + than"],
+["She is the ___ student in the class.","smartest","smart","smarter","more smart","มี the และเปรียบเทียบกับคนทั้งห้อง ใช้ขั้นสูงสุด smartest"],
+["He is ___ of spiders.","afraid","fear","fright","frighten","afraid of = กลัว (afraid เป็น adjective)"],
+["She has a ___ bag.","beautiful red leather","leather red beautiful","red beautiful leather","beautiful leather red","ลำดับ adjective: ความเห็น → สี → วัสดุ"],
+["What is the opposite of “generous”?","selfish","kind","rich","happy","generous (ใจกว้าง) ตรงข้ามกับ selfish (เห็นแก่ตัว)"],
+["The movie was ___. I almost fell asleep.","boring","bored","bore","boredom","-ing บรรยายสิ่งที่ทำให้รู้สึก (หนังน่าเบื่อ) ส่วน -ed บรรยายความรู้สึกของคน"]]}
+];
+const $=id=>document.getElementById(id);
+const shuf=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let items=[],done=false;
+function build(){
+  done=false;items=[];let n=0,h="";
+  S.forEach((s,si)=>{
+    h+=`<h2>${s.k}<small>${s.th}</small></h2>`;
+    s.q.forEach(q=>{
+      const id=n++;
+      const o=shuf([q[1],q[2],q[3],q[4]]);
+      items.push({s:si,ans:q[1],ex:q[5],id});
+      h+=`<div class="q" id="q${id}" style="--c:${s.c}"><p><span>${id+1}.</span>${q[0]}</p><div class="opts">`+
+        o.map(x=>`<label><input type="radio" name="q${id}" value="${x.replace(/"/g,'&quot;')}">${x}</label>`).join("")+`</div></div>`;
+    });
+  });
+  $("paper").innerHTML=h;
+  $("res").style.display="none";$("msg").textContent="";
+  $("go").textContent="ส่งคำตอบ";upd();
+}
+function upd(){
+  const a=items.filter(i=>document.querySelector(`input[name=q${i.id}]:checked`)).length;
+  $("cnt").textContent=`ตอบแล้ว ${a}/30`;$("fill").style.width=(a/30*100)+"%";
+}
+$("paper").addEventListener("change",upd);
+$("go").onclick=()=>{
+  if(done){build();window.scrollTo({top:0,behavior:"smooth"});return}
+  const nm=$("sname"),no=$("sno");
+  nm.classList.toggle("miss",!nm.value.trim());no.classList.toggle("miss",!no.value.trim());
+  if(!nm.value.trim()||!no.value.trim()){
+    $("msg").textContent="กรุณากรอกชื่อ-นามสกุลและเลขที่ก่อนส่งคำตอบ";
+    (nm.value.trim()?no:nm).focus();window.scrollTo({top:0,behavior:"smooth"});return;
+  }
+  const un=items.filter(i=>!document.querySelector(`input[name=q${i.id}]:checked`));
+  document.querySelectorAll(".q.miss").forEach(e=>e.classList.remove("miss"));
+  if(un.length){
+    $("msg").textContent=`ยังไม่ได้ตอบ ${un.length} ข้อ (ข้อ ${un.map(i=>i.id+1).join(", ")})`;
+    un.forEach(i=>$("q"+i.id).classList.add("miss"));
+    $("q"+un[0].id).scrollIntoView({behavior:"smooth",block:"center"});return;
+  }
+  $("msg").textContent="";done=true;
+  let score=0;const part=S.map(()=>0);
+  items.forEach(i=>{
+    const box=$("q"+i.id),ch=box.querySelector("input:checked").value,ok=ch===i.ans;
+    if(ok){score++;part[i.s]++}
+    box.querySelectorAll("label").forEach(l=>{
+      const v=l.querySelector("input").value;l.querySelector("input").disabled=true;
+      if(v===i.ans)l.classList.add("ok");else if(v===ch)l.classList.add("bad");
+    });
+    box.insertAdjacentHTML("beforeend",`<div class="ex"><b>${ok?"ถูกต้อง":"ตอบผิด"}</b> &middot; เฉลย: ${i.ans}<br>${i.ex}</div>`);
+  });
+  const msg=score>=24?"ยอดเยี่ยมมาก":score>=18?"ทำได้ดี":score>=12?"พอใช้ ทบทวนอีกนิด":"ลองทบทวนเนื้อหาแล้วทำใหม่อีกครั้ง";
+  const esc=t=>t.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  $("res").innerHTML=`<p style="margin:0 0 8px"><b>${esc($("sname").value.trim())}</b> &middot; เลขที่ ${esc($("sno").value.trim())}</p><div class="big">${score}/30</div><p><b>${msg}</b></p><ul>`+
+    S.map((s,k)=>`<li style="--c:${s.c}">${s.k}: ${part[k]}/${s.q.length}</li>`).join("")+`</ul>`;
+  $("res").style.display="block";
+  $("go").textContent="ทำใหม่อีกครั้ง";
+  window.scrollTo({top:0,behavior:"smooth"});
+};
+build();
+</script>
+</body>
+</html>
